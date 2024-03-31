@@ -30,3 +30,8 @@ export const ButtonText = styled.Text`
   color: #fff;
   font-size: 16px;
 `;
+
+export const ErrorText = styled.Text`
+  color: red;
+  margin-bottom: 16px;
+`;

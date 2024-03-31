@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import * as S from "./styles";
 import { connect } from "react-redux";
+import React, { useState } from "react";
 import { RootState } from "../../redux/types";
 import { incremented, decremented } from "../../redux/reducers/counterSlice";
-import * as S from "./styles";
 
 interface Props {
   counterValue: number;
