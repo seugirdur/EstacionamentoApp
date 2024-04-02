@@ -33,35 +33,23 @@ const HomeScreenComponent: React.FC<Props> = ({
     decrement();
     setnumber("decremented");
   };
-
-  const handleNavigateQrCode = () => {
-    console.log("navigate to qr code")
-    navigation.navigate("QrCode");
-  };
-
-  const handleNavigateCheckIn = () => {
-    navigation.navigate("CheckIn");
-  };
-
-  const handleNavigateCheckOut = () => {
-    navigation.navigate("CheckOut");
-  };
+  
 
   return (
     <S.Container>
       <S.Title>Home</S.Title>
       <S.Button>
-        <S.ButtonText onPress={() => handleNavigateQrCode}>
+        <S.ButtonText onPress={() => navigation.navigate("QrCode")}>
           Gerar QR Code
         </S.ButtonText>
       </S.Button>
       {/* TODO: botões nao estão navegando ainda */}
       {!checkin ? (
-        <S.Button onPress={handleNavigateCheckIn}>
+        <S.Button onPress={() => navigation.navigate("CheckIn")}>
           <S.ButtonText>Fazer Check-in</S.ButtonText>
         </S.Button>
       ) : (
-        <S.Button onPress={() => handleNavigateCheckOut}>
+        <S.Button onPress={() => navigation.navigate("CheckOut")}>
           <S.ButtonText>Fazer Check-out</S.ButtonText>
         </S.Button>
       )}
